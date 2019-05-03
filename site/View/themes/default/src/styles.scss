@@ -1,0 +1,17 @@
+@import 'reset';
+@import 'vars';
+@import 'global';
+
+@import 'components/sidebar/sidebar';
+@import 'components/button/button';
+@import 'components/block404/block404';
+@import 'components/header/header';
+@import 'components/form-card/form-card';
+@import 'components/input/input';
+@import 'components/items-list/items-list';
+@import 'components/item/item';
+
+body {
+  padding-left: 300px;
+  font-family: 'Arial', sans-serif;
+}

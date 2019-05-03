@@ -1,0 +1,30 @@
+.input {
+
+  &__label {
+    font-size: 20px;
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+
+  &_theme {
+
+    &_default {
+      
+      input[type="text"] {
+        height: 36px;
+        padding: 0 10px;
+        font-size: 20px;
+      } 
+    }
+  }
+
+  &_type {
+    
+    &_min-width-250 {
+
+      input[type="text"] {
+        min-width: 250px;
+      }
+    }
+  }
+}

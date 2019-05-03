@@ -1,0 +1,2 @@
+SIDEBAR
+<?=$this->data['name'];?>

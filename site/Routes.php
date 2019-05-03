@@ -1,8 +1,8 @@
 <?php
 
   $this->router->add('home', '/', 'HomeController:index');
-  $this->router->add('send-message', '/send_message/(number:any)', 'HomeController:sendMessage');
-  $this->router->add('news', '/news', 'HomeController:news');
-  $this->router->add('news-one', '/news/(id:int)', 'HomeController:oneNew');
+  $this->router->add('desk', '/desk/(desk:any)', 'HomeController:desk');
+  $this->router->add('item', '/item/(item:any)', 'HomeController:item');
+  $this->router->add('new-desk', '/new-desk', 'HomeController:newDesk');
 
 ?>

@@ -1,0 +1,47 @@
+.item {
+  width: 170px;
+  height: 170px;
+  background-color: lighten($base-color, 40%);
+  border-radius: 10px;
+  position: relative;
+
+  &__external {
+    background-color: rgba(256, 256, 256, 0.5);
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    border-radius: 30px;
+    background-image: url('/site/View/themes/default/images/icon-external-link.svg');
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__openButton {
+    background-color: rgba(256, 256, 256, 0.3);
+    color: white;
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    left: 3px;
+    text-align: center;
+    border-radius: 8px;
+    padding: 6px 4px;
+  }
+
+  &__title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    z-index: 0;
+  }
+}
