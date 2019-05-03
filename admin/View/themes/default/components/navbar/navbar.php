@@ -40,8 +40,8 @@
           <a class="button is-primary">
             <strong>Sign up</strong>
           </a>
-          <a class="button is-light">
-            Log in
+          <a href="/admin/logout/" class="button is-light">
+            Logout 
           </a>
         </div>
       </div>

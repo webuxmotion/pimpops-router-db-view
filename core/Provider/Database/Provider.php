@@ -10,12 +10,12 @@ class Provider extends AbstractProvider {
   public $workerName = 'db';
 
   public $config = [
-      'host' => 'localhost',
-      'db_name' => 'pimpops_router',
-      'username' => 'root',
-      'password' => '1111',
-      'charset' => 'utf8'
-    ];
+    'host' => 'localhost',
+    'db_name' => 'pimpops_router',
+    'username' => 'root',
+    'password' => '1111',
+    'charset' => 'utf8'
+  ];
 
   public function init() {
 
