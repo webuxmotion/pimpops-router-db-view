@@ -20,8 +20,28 @@ class AdminController extends Controller {
 
   public function checkAuthorization() {
     if ($this->auth->hashUser() == null) {
-      header('Location: /admin/login/');
-      exit;
+      $this->logout();      
+    } else {
+      $hash_user = $this->auth->hashUser();
+
+      $sql = '
+        SELECT *
+        FROM `user`
+        WHERE hash="' . $hash_user .'"
+        LIMIT 1
+      ';
+
+      $query = $this->db->query($sql);
+
+      if (!empty($query)) {
+        $user = $query[0]; 
+
+        if ($user->role != 'admin') {
+          $this->logout();      
+        }
+      } else {
+        $this->logout();      
+      }
     }
   }
 
