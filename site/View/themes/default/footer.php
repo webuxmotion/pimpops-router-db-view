@@ -1,1 +1,2 @@
-<div>FOOTER <?=$this->data['name'];?></div>
+</body>
+</html>

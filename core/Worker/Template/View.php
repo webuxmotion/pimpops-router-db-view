@@ -6,7 +6,7 @@ use Core\Worker\Template\Theme;
 
 class View {
 
-  protected $theme;
+  public $theme;
 
   public function __construct() {
     $this->theme = new Theme();

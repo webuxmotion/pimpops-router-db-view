@@ -1,0 +1,80 @@
+.button {
+
+  &_theme {
+
+    &_switcher {
+      text-transform: uppercase;  
+      text-decoration: none;
+      font-weight: bold;
+      width: 64px;
+      height: 34px;
+      border-radius: 30px;
+      font-size: 20px;
+      color: darken($base-color, 30%);
+
+      &:hover {
+        background-color: rgba(256, 256, 256, 0.2);
+      }
+
+      &.is-active {
+        background-color: white;
+        color: black;
+      }
+    }
+
+    &_desk-list {
+      text-decoration: none;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+      color: darken($base-color, 30%);
+      font-weight: bold;
+
+      &:hover {
+        background-color: rgba(256, 256, 256, 0.2);
+      }
+    }
+
+    &_add-new {
+      text-decoration: none;
+      font-weight: bold;
+      color: darken($base-color, 30%);
+      padding: 8px 10px;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: rgba(256, 256, 256, 0.2);
+      }
+    }
+
+    &_primary {
+      background-color: $base-color;
+      border: none;
+      min-height: 40px;
+      border-radius: 6px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    &_secondary {
+      background-color: #cecece;
+      border: none;
+      min-height: 40px;
+      border-radius: 6px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+
+  &_type {
+    
+    &_min-width-150 {
+      min-width: 150px;
+    }
+  }
+}
