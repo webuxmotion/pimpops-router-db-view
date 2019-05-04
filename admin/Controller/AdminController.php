@@ -24,14 +24,14 @@ class AdminController extends Controller {
     } else {
       $hash_user = $this->auth->hashUser();
 
-      $sql = '
-        SELECT *
-        FROM `user`
-        WHERE hash="' . $hash_user .'"
-        LIMIT 1
-      ';
+      $sql = $this->qb
+        ->select()
+        ->from('user')
+        ->where('hash', $hash_user)
+        ->limit(1)
+        ->sql();
 
-      $query = $this->db->query($sql);
+      $query = $this->db->query($sql, $this->qb->values);
 
       if (!empty($query)) {
         $user = $query[0]; 

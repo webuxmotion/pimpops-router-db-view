@@ -7,4 +7,8 @@ class DashboardController extends AdminController {
   public function index() {
     $this->view->render('pages/dashboard');
   }
+
+  public function users() {
+    echo('users');
+  }
 }

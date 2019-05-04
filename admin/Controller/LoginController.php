@@ -29,15 +29,15 @@ class LoginController extends Controller {
 
     $params = $this->request->post;
 
-    $sql = '
-      SELECT *
-      FROM `user`
-      WHERE email="' . $params['email'] .'"
-      AND password="' . md5($params['password']) .'"
-      LIMIT 1
-    ';
+    $sql = $this->qb
+      ->select()
+      ->from('user')
+      ->where('email', $params['email'])
+      ->where('password', md5($params['password']))
+      ->limit(1)
+      ->sql();
 
-    $query = $this->db->query($sql);
+    $query = $this->db->query($sql, $this->qb->values);
 
     if (!empty($query)) {
       $user = $query[0]; 
@@ -45,13 +45,13 @@ class LoginController extends Controller {
       if ($user->role == 'admin') {
         $hash = md5($user->id . $user->email . $user->password . $this->auth->salt());
 
-        $sql = '
-          UPDATE user
-          SET hash = "' . $hash . '"
-          WHERE id=' . $user->id . '
-        ';
+        $sql = $this->qb
+          ->update('user')
+          ->set(['hash' => $hash])
+          ->where('id', $user->id)
+          ->sql();
 
-        $this->db->execute($sql);
+        $this->db->execute($sql, $this->qb->values);
 
         $this->auth->authorize($hash);
 
