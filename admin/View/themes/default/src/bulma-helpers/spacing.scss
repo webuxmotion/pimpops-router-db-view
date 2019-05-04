@@ -1,0 +1,53 @@
+$spacing-range-start: 5;
+$spacing-range-end: 150;
+$spacing-interval: 5;
+
+// spacing helpers settings
+$range-start: $spacing-range-start;
+$range-end: $spacing-range-end;
+$interval: $spacing-interval;
+$sides: (top, bottom, left, right);
+
+$current: $range-start;
+
+@while $current < $range-end {
+  .has-margin-#{$current} {
+    margin: #{$current / strip-unit($body-size)}rem !important;
+  }
+
+  .has-padding-#{$current} {
+    padding: #{$current / strip-unit($body-size)}rem !important;
+  }
+
+  @each $side in $sides {
+    .has-margin-#{$side}-#{$current} {
+      margin-#{$side}: #{$current / strip-unit($body-size)}rem !important;
+    }
+
+    .has-padding-#{$side}-#{$current} {
+      padding-#{$side}: #{$current / strip-unit($body-size)}rem !important;
+    }
+  }
+
+  $current: $current + $interval;
+}
+
+@each $side in $sides {
+  .is-#{$side}-marginless {
+    margin-#{$side}: 0 !important;
+  }
+
+  .is-#{$side}-paddingless {
+    padding-#{$side}: 0 !important;
+  }
+}
+
+.has-margin-auto {
+  margin: auto !important;
+}
+
+@each $side in $sides {
+  .has-margin-#{$side}-auto {
+    margin-#{$side}: auto !important;
+  }
+}

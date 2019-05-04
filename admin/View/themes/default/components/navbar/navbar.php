@@ -3,32 +3,21 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item">
+      <a href="/admin/" class="navbar-item">
         Home
-      </a>
-
-      <a class="navbar-item">
-        Documentation
       </a>
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
-          More
+          Pages 
         </a>
 
         <div class="navbar-dropdown">
-          <a class="navbar-item">
-            About
+          <a href="/admin/pages/" class="navbar-item">
+            Show pages 
           </a>
-          <a class="navbar-item">
-            Jobs
-          </a>
-          <a class="navbar-item">
-            Contact
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            Report an issue
+          <a href="/admin/page/create/" class="navbar-item">
+            + Create page 
           </a>
         </div>
       </div>
@@ -37,9 +26,6 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a class="button is-primary">
-            <strong>Sign up</strong>
-          </a>
           <a href="/admin/logout/" class="button is-light">
             Logout 
           </a>
