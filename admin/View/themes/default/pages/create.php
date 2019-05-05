@@ -21,18 +21,18 @@
     <div class="field">
       <label class="label">Title</label>
       <div class="control">
-        <input class="input" type="text" placeholder="Page Title">
+        <input id="page_title" class="input" type="text" placeholder="Page Title">
       </div>
     </div>
     <div class="field">
       <label class="label">Content</label>
       <div class="control">
-        <textarea class="textarea" placeholder="10 lines of textarea" rows="10"></textarea>
+        <textarea id="editor" class="textarea" placeholder="10 lines of textarea" rows="10"></textarea>
       </div>
     </div>
     <div class="field is-grouped">
       <div class="control">
-        <button class="button is-link">Publish</button>
+        <button class="button is-link" onclick="page.add(event)">Publish</button>
       </div>
     </div>
   </form>

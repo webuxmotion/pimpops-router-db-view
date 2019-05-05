@@ -2,3 +2,4 @@
 /node_modules
 site/View/themes/default/app/
 admin/View/themes/default/app/
+.idea

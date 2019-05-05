@@ -27,19 +27,22 @@
 <div class="container has-padding-top-50">
   <table class="table">
     <thead>
+
       <tr>
         <th><abbr title="Id">Id</abbr></th>
         <th><abbr title="Title">Title</abbr></th>
-        <th><abbr title="Content">Content</abbr></th>
+        <th><abbr title="Content">Date</abbr></th>
       </tr>
+
     </thead>
     <tbody>
+    <?php foreach ($pages as $key => $page) : ?>
       <tr>
-        <th>1</th>
-        <td><a href="https://en.wikipedia.org/wiki/Leicester_City_F.C." title="Leicester City F.C.">Leicester City</a> <strong>(C)</strong>
-        </td>
-        <td>38</td>
+        <th><?=++$key?></th>
+        <td><a href="<?=$page->id?>" title="<?=$page->title?>"><?=$page->title?></a></td>
+        <td><?=$page->date?></td>
       </tr>
+    <?php endforeach; ?>
     </tbody>
   </table>
 </div>
